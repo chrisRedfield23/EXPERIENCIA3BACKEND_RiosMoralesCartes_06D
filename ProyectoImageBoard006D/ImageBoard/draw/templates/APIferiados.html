@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% static ''%}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'img/abogato.png'%}">
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'Css/EstilosAPI.css'%}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Feriados</title>
+    <script src="{% static 'js/feriados.js'%}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#enviar").click(function(){
+
+                $.get("https://apis.digital.gob.cl/fl/feriados/2021",
+                    function(data){
+
+                        $.each(data,function(i,item){
+                            $("#fechas").append("<tr><td>"+ item.nombre + "" + "</td><td>"+ item.fecha +
+                            "</td><td>" + item.tipo + "</td></tr>");
+
+
+                        });
+
+                    });
+            });
+        })
+    </script>
+    <style>
+        #caja{
+            margin-left:40px;
+        }
+    </style>
+
+    <style>
+        body {
+            background-image: url"{% static 'img/fondo_api.jpg'%}";
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <h1 class="title">Feriados Irrenunciables (Cerrado)</h1>
+    <br>
+    <div id="caja">
+        <center><h3 onmouseover="style.color = 'orange'" onmouseout="style.color= 'white'" class="title2">
+            !!Revisa Aquí los días que estaremos fuera de servicio!!</h3></center>
+        <p id="feriado"></p>
+            <br>
+        <p id="feriado2"></p>
+
+        <br><br>
+
+
+        <button type="button" class="btn" id="enviar"> Revisa Aquí </button>
+
+    </div>
+    <div class="form-devolverse"><br>
+        <b><p>¿ Quieres volver al inicio ?<a class="link" href="{% url 'MenuPrincipal02'%}"> Ir a inicio</a></p></b>
+    </div>
+    <br><br>
+
+    <table class="table" id="fechas">
+        <thead>
+            <tr>
+                <th scope="col">Nombre  </th>
+                <th scope="col">Fecha  </th>
+                <th scope="col">Tipo  </th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+</body>
+</html>

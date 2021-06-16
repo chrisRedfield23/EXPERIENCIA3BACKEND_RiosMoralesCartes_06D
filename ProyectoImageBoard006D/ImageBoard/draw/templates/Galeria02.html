@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Galería</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        {% static ''%}
+        <link rel="icon" type="image/png" href="{% static 'img/abogato.png'%}">
+        <link rel="stylesheet" href="{% static 'Css/EstiloGalería.css'%}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#icon').click(function(){
+                    $('ul').toggleClass('show');
+                });
+            });
+
+
+        </script>
+        <style>
+            body {
+                background-image: url"{% static 'img/portadaazul.jpg'%}";
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <label class="logo">Image/\Board</label>
+            <ul>
+                <li><a class="active" href="{% url 'MenuPrincipal02'%}">Inicio</a></li>
+                <li><a href="{% url 'QuienesSomos02'%}">Sobre Nosotros</a></li>
+                <li><a href="{% url 'Galeria02'%}">Galería</a></li>
+                <li><a href="{% url 'InicioSesion'%}">Iniciar Sesión</a></li>
+                <li><a href="{% url 'RegistroContacto'%}">Contacto</a></li>
+            </ul>
+            <label id="icon">
+                <i class="fas fa-bars"></i>
+            </label>
+        </nav>
+        <br>
+        <br>
+        <h1 class="tit">Galería Fotográfica</h1>
+        <br>
+        <div class="cont">
+            <div class="item">
+              <img src="{% static 'img/gal_1.jpg'%}" alt="" class="item-img">
+              <div class="item-text">
+                <h3>BABYMETAL</h3>
+                <p>Babymetal es una banda idol japonesa de heavy metal, kawaii metal y j-pop formada en Tokio en 2010.
+                  <br>
+                   Actualmente está integrada por
+                   Suzuka Nakamoto y Moa Kikuchi, siendo Yui Mizuno miembro de la
+                   banda.<br>
+                   <br>
+                  <b>$7.990</b></p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="{% static 'img/gal_2.jpeg'%}" alt="" class="item-img">
+              <div class="item-text">
+                <h3>Naturaleza del Olimpo</h3>
+                <p>Sabiduría única y viva de la madre Naturaleza
+                  al estilo japonés, su escencia de los colores y transmisión
+                  hacen una importancia grande con el cuidado
+                  del ambiente.
+                  <br>
+                  <br>
+                  <b>$6.990</b>
+
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="{% static 'img/gal_3.jpg'%}" alt="" class="item-img">
+              <div class="item-text">
+                <h3>Imagination</h3>
+                <p>Estabilidad emocional=Un mundo de alterabilidad
+                  <br>
+                  <br>
+                  <b>$5990</b>
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="{% static 'img/gal_4.jpg'%}" alt="" class="item-img">
+              <div class="item-text">
+                <h3>Princess your mind</h3>
+                <p>Dominante de las mentes de las elites con el fin de
+                  destruir la maldad y transformarla en una reflexión mundial.
+                  <br>
+                  <br>
+                  <b>$5.990</b>
+                </p>
+              </div>
+            </div>
+
+
+            <div class="item">
+              <img src="{% static 'img/gal_5.jpg'%}" alt="" class="item-img">
+              <div class="item-text">
+                <h3>Fuego</h3>
+                <p>Cautiva por mucho tiempo en las tinieblas
+                  del castillo Dimitrescu, pero no se da cuenta que
+                  tiene un gran poder en su interior.
+                  <br>
+                  <br>
+                  <b>$5.500</b>
+                </p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="{% static 'img/gal_6.jpg'%}" alt="" class="item-img">
+              <div class="item-text">
+                <h3>Cat Lover</h3>
+                <p>Amante de los animales, sobretodo los gatitos,
+                  una ilusión favoritas de los cats que pueden encontrar en
+                  Japón.
+                  <br>
+                  <br>
+                  <b>$5.500</b>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          
+
+        <br>
+
+
+
+
+
+        <footer class="footer">
+
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Integrantes: </h4>
+                        <br>
+                        <ul>
+                            <li><a href="#">Alejandra Cartes</a></li>
+                            <li><a href="#">Kevin Rios</a></li>
+                            <li><a href="#">Christian Morales</a></li>
+                        <ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Síguenos en nuestras redes sociales: </h4>
+                        <br>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+            <h2 class="titular-final">&copy;ImageBoard Design | ImageBoard 2021 </h2>
+        </footer>
+    </body>
+</html>

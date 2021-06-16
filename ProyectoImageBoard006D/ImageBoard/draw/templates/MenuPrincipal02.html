@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Image Board</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="icon" type="image/png" href=" {% static 'img/abogato.png'%}">
+        <link rel="stylesheet" href="{% static 'Css/EstilosIndex.css'%}">
+        {% static ''%}
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#icon').click(function(){
+                    $('ul').toggleClass('show');
+                });
+            });
+
+
+        </script>
+
+        <style>
+            body {
+                background-image: url"{% static 'img/gifaurora.gif'%}";
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="navbar fixed-top">
+            <nav>
+                <label class="logo">Image/\Board</label>
+                <ul>
+                    <li><a class="active" href="{% url 'MenuPrincipal02'%}">Inicio</a></li>
+                    <li><a href="{% url 'QuienesSomos02'%}">Sobre Nosotros</a></li>
+                    <li><a href="{% url 'Galeria02'%}">Galería</a></li>
+                    <li><a href="{% url 'InicioSesion'%}">Iniciar Sesión</a></li>
+                    <li><a href="{% url 'RegistroContacto'%}">Contacto</a></li>
+
+                </ul>
+                <label id="icon">
+                    <i class="fas fa-bars"></i>
+                </label>
+            </nav>
+        </div>
+        <br>
+      <div class="textoestiloso">
+        <h1>¡Image board, un viaje al arte digital!</h1>
+        <br>
+        </div>
+        <div class="carrusel">
+            <ul class="carrusel-fotos">
+                <li id="foto1"><img src="{% static 'img/Jill_Valentine_01.png'%}" alt="" ></li>
+                <li id="foto2"><img src="{% static 'img/Max_Cauldfield_02.jpg'%}" alt="" ></li>
+                <li id="foto3"><img src="{% static 'img/Kaneki_Ken_03.jpg'%}" alt="" ></li>
+                <li id="foto4"><img src="{% static 'img/Ashitaka_04.jpg'%}" alt="" ></li>
+                <li id="foto5"><img src="{% static 'img/Chihiro_05.jpg'%}" alt="" ></li>
+
+            </ul>
+
+            <ul class="carrusel-menu">
+                <li><a href="#foto1"><img src="{% static 'img/Jill_Valentine_01.png'%}" alt="" ></a></li>
+                <li><a href="#foto2"><img src="{% static 'img/Max_Cauldfield_02.jpg'%}" alt="" ></a></li>
+                <li><a href="#foto3"><img src="{% static 'img/Kaneki_Ken_03.jpg'%}" alt="" ></a></li>
+                <li><a href="#foto4"><img src="{% static 'img/Ashitaka_04.jpg'%}" alt="" ></a></li>
+                <li><a href="#foto5"><img src="{% static 'img/Chihiro_05.jpg'%}" alt="" ></a></li>
+            </ul>
+        </div>
+        <br>
+        <div class="tituloss"><h3>¿Image Board?</h3></div>
+        <br>
+        <div class="container">
+            <p>
+                <b>En esta oportunidad, este proyecto esta basado en la creatividad,
+
+habilidad y significado de los dibujos de usuarios en una vista virtual.
+
+Si bien, hoy en día es todo por internet, durante el 2020 (a inicios de
+ la pandemia), fue complejo realizar este proyecto debido a la gravedad de la
+
+situación, sin embargo, durante este año se decide dar una oportunidad
+
+e implementar un sitio web que pueda representar el arte del dibujo "Anime" o "Manga",
+
+llevándolo a cabo en una plataforma web.
+
+Sin embargo, entregamos contenido propio de imágenes ilustradas que han sido realizadas
+
+por la creadora del sitio web, ya que es un don que no es conocido y la idea es que se expanda por el mundo.
+                <br>
+                <br>
+                <div class="tituloss"><h3>¿Cuál es el objetivo?</h3></div>
+                <br>
+                El objetivo es que esta plataforma web sea un medio publicitario para que usuarios
+                de distintos navegadores puedan acceder a los dibujos y con ello comprar lienzos de artistas
+                nacionales e internacionales, comisionarlos y entregarles la oportunidad de promocinar sus más recientes
+                trabajos al público de la web y redes sociales.
+                Las ideas principales es innovar, realizar un cambio del dibujo manual a digital
+                y ambiental, oportunidad de disminuir la tala de árboles y entregar las
+                herramientas a personas que quieran crecer con su trabajo.
+                Finalmente, si desean saber más de nuestro sitio web y conocer
+                los dibujos, tenemos nuestras redes sociales y podrán conocer quiénes
+                son los creadores de "Image/Board" y comentarios de youtubers famosos en este 2021.</b><br>
+                <br>
+
+            </p>
+        </div>
+            <div class="bienvenida"><p><mark><b>¡Bienvenid@s a Image/Board!</b></mark></p> </div>
+            <div class="gif"><img src="{% static 'img/gif1.gif'%}"></div>
+            <br>
+            <div class="form-api"><br>
+                <b><p> REVISA AQUÍ QUE DÍAS NO ESTAREMOS DISPONIBLE <a class="link" href="{% url 'APIferiados'%}"> Click Aquí </a></p></b>
+            </div>
+            <br>
+
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            </div>
+            <br>
+            <footer class="footer">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col">
+                            <h4>Integrantes: </h4>
+                            <br>
+                            <ul>
+                                <li><a href="#">Alejandra Cartes</a></li>
+                                <li><a href="#">Kevin Rios</a></li>
+                                <li><a href="#">Christian Morales</a></li>
+                            <ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Síguenos en nuestras redes sociales: </h4>
+                            <br>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+                <h2 class="titular-final">&copy;ImageBoard Design | ImageBoard 2021 </h2>
+            </footer>
+    </body>
+
+
+</html>

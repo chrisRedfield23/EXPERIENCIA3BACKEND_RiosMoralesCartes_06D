@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacto</title>
+	<link rel="stylesheet" type="text/css" href="Css/EstiloContacto.css">
+  <link rel="icon" type="image/png" href="img/abogato.png">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+    <script>
+        function CambiaColor(a)
+
+    {
+        a.style.background = "orange";
+    }
+
+    </script>
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2 onmouseover="style.color = 'orange'" onmouseout="style.color= 'black'">Contáctanos</h2>
+                <div class="form-group text-center pt-3">
+				        <input type="text" onfocus="CambiaColor(this)" class="field" placeholder="Ingrese su nombre" required>
+                        <span class="msj"></span>
+                </div>
+                <div class="form-group text-center pt-3">
+                    <input type="number" onfocus="CambiaColor(this)" class="field" placeholder="Ingrese su teléfono" required>
+                    <span class="msj"></span>
+                </div>
+                <div class="form-group text-center pt-3">
+				    <input type="email" onfocus="CambiaColor(this)" class="field" placeholder="Ingrese su email" required>
+                    <span class="msj"></span>
+                </div>
+                <div class="form-group text-center pt-3">
+				    <input type="date" onfocus="CambiaColor(this)" class="field" placeholder="Ingrese fecha" required>
+                    <span class="msj"></span>
+                </div>
+
+				    <textarea onfocus="CambiaColor(this)" placeholder="Mensaje/Comentario" class="field" required></textarea>
+                    <span class="msj"></span>
+
+				<button type="submit" class="btn" >Enviar</button>
+                <div class="form-devolverse"><br>
+                    <b><p>¿ Quieres volver al inicio ?<a class="link" href="MenuPrincipal02.html"> Ir a inicio</a></p></b>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

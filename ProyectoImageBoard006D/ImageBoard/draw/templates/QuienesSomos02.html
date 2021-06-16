@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>¿Quíenes Somos?</title>
+        <meta charset="UTF-8">
+        {% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% static ''%}
+        <link rel="icon" type="image/png" href="{% static 'img/abogato.png'%}">
+        <link rel="stylesheet" href="{% static 'Css/EstiloAboutUs.css'%}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#icon').click(function(){
+                    $('ul').toggleClass('show');
+                });
+            });
+
+
+        </script>
+
+        <style>
+            body {
+                background-image: url"{% static 'img/fondo_naranjo.jpeg'%}";
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="navbar fixed-top">
+            <nav>
+                <label class="logo">Image/\Board</label>
+                <ul>
+                    <li><a class="active" href="{% url 'MenuPrincipal02'%}">Inicio</a></li>
+                    <li><a href="{% url 'QuienesSomos02'%}">Sobre Nosotros</a></li>
+                    <li><a href="{% url 'Galeria02'%}">Galería</a></li>
+                    <li><a href="{% url 'InicioSesion'%}">Iniciar Sesión</a></li>
+                    <li><a href="{% url 'RegistroContacto'%}">Contacto</a></li>
+
+                </ul>
+
+                <label id="icon">
+                    <i class="fas fa-bars"></i>
+                </label>
+            </nav>
+        </div>
+        <br>
+        <section class="contenedor sobre-nosotros">
+            <br>
+            <div class="contenedor-sobre-nosotros">
+                <div class="contenido-texto">
+                    <p><b>Esta pequeña empresa esta dedicada a publicar
+                    dibujos de artistas del mundo y con ello realizar promociones
+                    de su arte digital, esto con el fin de que los usuarios puedan
+                     comprar lienzos en base al género del dibujo japones que le guste.
+                    <br>
+                    <br>
+                    La misión es que este sitio web deje una huella en los corazones de
+                    los usuarios fanáticos de los dibujos Anime, decidimos ejecutar esta idea ya que hoy en día
+                    las series, películas que ven los jóvenes son de origen japonés, la trama e historias que son
+                    transmitidas en internet son un vivo ejemplo de la creatividad y la intensa experiencia que se vive.
+                    <br>
+                    <br>
+                    ¿Qué visión a futuro se tiene? La idea de "Image/\Board" es que se expanda fuera de Chile,
+                    ya que es muy importante considerar el don de los usuarios que nos entregan sus dibujos
+                    para que puedan ser publicados y vendidos, esto también considerando una oportunidad
+                    de concientizar a la gente que se puede realizar dibujos digitales a través de un programa
+                    y evitar el uso del papel, dado que una hoja de papel equivale a 17 árboles de especies de roble y arce.
+                    En si es un manera de tener conciencia y que de alguna manera podamos innovar el sistema de la tecnología
+                    y de transmitir el sentido del dibujo a través de una plataforma web.</b></p>
+
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <center><iframe width="560" height="315" src="https://www.youtube.com/embed/rw14Bl2xWOU"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe></center>
+        <br>
+        <section class="clientes contenedor">
+            <h2 class="titulo-texto">Comentarios de usuarios a Image/Board </h2>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <img src="{% static 'img/Elrubius2020.webp'%}" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>ElRubiusOMG</h4>
+                        <br>
+                        <p><b>Son los mejores dibujos que he visto en mi vida he quedado flipando y no aguante y me compre uno y quedo hermoso.</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/elkrysicno.jpg'%}" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>ElKrys</h4>
+                        <br>
+                        <p><b>Quede loco con los dibujos que vi tuve que vender mi casa para seguir comprando dibujos.</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/fernanfloo.jpg'%}" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>FernanFloo</h4>
+                        <br>
+                        <p><b>Me encanto lo recomiendo 100% nunca pense en tan buena calidad vale cada peso que pague.</b></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <main>
+            <section class="about-services">
+                <div class="contenedor">
+                    <br>
+                    <h2 class="titulo-extras">¡¡Extras!!</h2>
+                    <br>
+                    <div class="extras-texto"><p>Aquí pueden ver algunos de los dibujos premiados en los Billboard Drawn Awards</b></p></div>
+                        <div class="servicio-cont">
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/1.jpg'%}" alt="" class="imagen">
+                                <h3 class="Name"></h3>
+
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/2.png'%}" alt="" class="imagen">
+                                <h3 class="Name"></h3>
+
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/3.jpg'%}" alt="" class="imagen">
+                                <h3 class="Name"></h3>
+
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/4.jpg'%}" alt="" class="imagen">
+                                <h3 class="Name"></h3>
+
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/5.png'%}" alt="" class="imagen">
+                                <h3 class="Name"></h3>
+
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/6.jpg'%}" alt="" class="imagen">
+                                <h3 class="Name"></h3>
+
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/7.jpg'%}" alt="" class="imagen">
+                                <h3 class="Name"></h3>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="main.js"></script>
+
+        <footer class="footer">
+
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Integrantes: </h4>
+                        <br>
+                        <ul>
+                            <li><a href="#">Alejandra Cartes</a></li>
+                            <li><a href="#">Kevin Rios</a></li>
+                            <li><a href="#">Christian Morales</a></li>
+                        <ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Síguenos en nuestras redes sociales: </h4>
+                        <br>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+            <h2 class="titular-final">&copy;ImageBoard Design | ImageBoard 2021 </h2>
+        </footer>
+    </body>
+</html>
