@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="img/abogato.png">
+    {% static ''%}
+    <link rel="icon" type="image/png" href="{% static 'img/abogato.png'%}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="Css/EstilosInicioSesionRegistro.css">
+    <link rel="stylesheet" href="{% static 'Css/EstilosInicioSesionRegistro.css'%}">
     <title>Inicio de Sesión</title>
     <script>
 
@@ -54,8 +56,8 @@
                     </div>
                     <div class="form-group mx-sm-4 text-right">
                         <p>En el momento de registrarte aceptas nuestras Condiciones de uso y politicas de privacidad.</p>
-                        <p>¿Aun no posees una cuenta?<a class="link" href="RegistroUsuario.html"> Registrarse</a></p>
-                        <p>¿ Quieres volver al inicio ?<a class="link" href="MenuPrincipal02.html"> Ir a inicio</a></p>
+                        <p>¿Aun no posees una cuenta?<a class="link" href="{% url 'RegistroUsuario'%}"> Registrarse</a></p>
+                        <p>¿ Quieres volver al inicio ?<a class="link" href="{% url 'MenuPrincipal02'%}"> Ir a inicio</a></p>
                     </div>
                 </form>
             </div>

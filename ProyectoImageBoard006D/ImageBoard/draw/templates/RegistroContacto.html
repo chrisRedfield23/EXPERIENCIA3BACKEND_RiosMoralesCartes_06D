@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
 	<title>Contacto</title>
+    {% static ''%}
 	<link rel="stylesheet" type="text/css" href="Css/EstiloContacto.css">
   <link rel="icon" type="image/png" href="img/abogato.png">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
@@ -44,7 +46,7 @@
 
 				<button type="submit" class="btn" >Enviar</button>
                 <div class="form-devolverse"><br>
-                    <b><p>¿ Quieres volver al inicio ?<a class="link" href="MenuPrincipal02.html"> Ir a inicio</a></p></b>
+                    <b><p>¿ Quieres volver al inicio ?<a class="link" href="{% url 'MenuPrincipal02'%}"> Ir a inicio</a></p></b>
                 </div>
 			</div>
 		</div>
