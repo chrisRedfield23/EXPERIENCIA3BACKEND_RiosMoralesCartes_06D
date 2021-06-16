@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="img/abogato.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/EstilosInicioSesionRegistro.css">
+    <title>Inicio de Sesión</title>
+    <script>
+
+        function CambiaColor(a)
+        {
+        a.style.background = "white";
+        }
+        function CambiarMayusculas()
+        {
+            var a = document.getElementById("nom");
+            var b = document.getElementById("mail");
+            a.value = a.value.toUpperCase();
+            b.value = b.value.toUpperCase();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center pt-5 mt-5 m-1">
+            <div class="col-md-6 col-sm-8 col-xl-4 col-lg-5 formulario">
+                <form action="">
+                    <div class="form-group text-center pt-3">
+                        <h1 class="text-light">INICIO DE SESION</h1>
+                    </div>
+                    <div class="form-group mx-sm-4 pt-3">
+                        <input type="text" class="form-control" id="nom" required placeholder="Ingrese su Nombre" onchange="CambiarMayusculas()" onfocus="CambiaColor(this)">
+                        <span class="msj"></span>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <input type="email" class="form-control" id="mail" required placeholder="Ingrese su Correo" onchange="CambiarMayusculas()" onfocus="CambiaColor(this)">
+                        <span class="msj"></span>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <input type="password" class="form-control" required placeholder="Ingrese su Contraseña" onfocus="CambiaColor(this)">
+                        <span class="msj"></span>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-3">
+                        <input type="password" class="form-control" required placeholder="Confirme Contraseña" onfocus="CambiaColor(this)">
+                        <span class="msj"></span>
+                    </div>
+                    <div class="form-group mx-sm-4 pb-2">
+                        <input type="submit" class="btn btn-block ingresar" value="INICIAR SESION">
+                    </div>
+                    <div class="form-group mx-sm-4 text-right">
+                        <p>En el momento de registrarte aceptas nuestras Condiciones de uso y politicas de privacidad.</p>
+                        <p>¿Aun no posees una cuenta?<a class="link" href="RegistroUsuario.html"> Registrarse</a></p>
+                        <p>¿ Quieres volver al inicio ?<a class="link" href="MenuPrincipal02.html"> Ir a inicio</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+</body>
+
+</html>

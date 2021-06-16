@@ -20,3 +20,6 @@ def RegistroContacto(request):
 
 def RegistroUsuario(request):
     return render(request, 'RegistroUsuario.html')
+
+def InicioSesion(request):
+    return render(request, 'InicioSesion.html')
