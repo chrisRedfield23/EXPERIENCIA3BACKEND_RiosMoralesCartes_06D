@@ -15,7 +15,7 @@ class registro(models.Model):
     nombre  = models.CharField(max_length=20, verbose_name='nombre')
     apellido = models.CharField(max_length=20, verbose_name='apellido')
     correo_electronico = models.CharField(max_length=40,primary_key=True, verbose_name='correo_electronico')
-    telefono  = models.IntegerField(max_length=10, verbose_name='telefono')
+    telefono  = models.IntegerField(verbose_name='telefono')
     fecha_nacimiento = models.CharField(max_length=10, verbose_name='fecha_nacimiento')
     direccion = models.CharField(max_length=50, verbose_name='direccion')
     region  = models.CharField(max_length=15, verbose_name='region')
