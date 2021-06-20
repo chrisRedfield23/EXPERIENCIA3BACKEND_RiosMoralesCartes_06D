@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando Registros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Creando Registro de Usuarios</h1>
+
+        </div>
+
+        <div class="row">
+            <form method="POST" action="#" id="formulario">
+                {%csrf_token%}
+                <div class="form-group">
+                    {{registro_form.nombre.label}}
+                    {{registro_form.nombre}}
+                </div>
+
+                <div class="form-group">
+                    {{registro_form.apellido.label}}
+                    {{registro_form.apellido}}
+                </div>
+
+                <div class="form-group">
+                    {{registro_form.correo_electronico.label}}
+                    {{registro_form.correo_electronico}}
+                </div>
+
+                <div class="form-group">
+                    {{registro_form.telefono.label}}
+                    {{registro_form.telefono}}
+                </div>
+
+                <div class="form-group">
+                    {{registro_form.fecha_nacimiento.label}}
+                    {{registro_form.fecha_nacimiento}}
+                </div>
+
+                <div class="form-group">
+                    {{registro_form.direccion.label}}
+                    {{registro_form..direccion}}
+                </div>
+
+                <div class="form-group">
+                    {{registro_form.region.label}}
+                    {{registro_form.region}}
+                </div>
+
+                <div class="form-group">
+                    {{registro_form.genero.label}}
+                    {{registro_form.genero}}
+                </div>
+
+                <div class="form-group">
+                   {{registro_form.inicio_sesion.label}}
+                   {{registro_form.inicio_sesion}}
+                    <select class="form-control">
+
+                    </select>
+                </div>
+
+                <input type="submit" class="btn btn-danger" id="enviar"
+                value="Enviar">
+                <input type="reset" class="btn btn-primary" id="Limpiar"
+                value="Limpiar">
+
+            </form>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
