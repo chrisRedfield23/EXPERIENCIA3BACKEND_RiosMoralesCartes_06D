@@ -4,8 +4,8 @@
     {% load static %}
 	<title>Contacto</title>
     {% static ''%}
-	<link rel="stylesheet" type="text/css" href="Css/EstiloContacto.css">
-  <link rel="icon" type="image/png" href="img/abogato.png">
+	<link rel="stylesheet" type="text/css" href="{% static 'Css/EstiloContacto.css'%}">
+  <link rel="icon" type="image/png" href="{% static 'img/abogato.png'%}">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 
@@ -51,5 +51,7 @@
 			</div>
 		</div>
 	</div>
+    <br>
+    <a class="link" href="{% url 'draw/form_registro'%}"> Creación de registro de usuarios </a>
 </body>
 </html>

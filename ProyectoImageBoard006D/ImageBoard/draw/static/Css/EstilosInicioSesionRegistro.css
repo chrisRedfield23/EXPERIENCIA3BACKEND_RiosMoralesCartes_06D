@@ -77,7 +77,7 @@ input:focus:user-invalid ~ .msj::after{
 }
 
 input[type="text"]:focus:invalid ~ .msj::after{
-    content: 'Ingrese su nombre(Obligatorio)';
+    content: 'Ingrese su datos(Obligatorio)';
 }
 input[type="email"]:focus:invalid ~ .msj::after{
     content: 'Ingrese un email(Obligatorio "usuario@gmail.com")';
