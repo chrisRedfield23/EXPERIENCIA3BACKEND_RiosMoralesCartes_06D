@@ -27,6 +27,11 @@ def home(request):
 def InicioSesion(request):
     return render(request, 'InicioSesion.html')
 
+def ver(request):
+    regisstro = registro.objects.all()
+
+    return render(request, 'draw/ver.html', context={'registro':registro})
+
 def form_registro(request):
     if request.method=="POST":
         registro_form = registroForm(request.POST)
@@ -37,3 +42,16 @@ def form_registro(request):
             registro_form=registroForm()
         return render(request, 'draw/form_registro.html',
         {'registro_form':registro_form})
+
+def form_mod_registro(request,id):
+    regisstro = registro.objects.get(nombre=nombre)
+
+    datos ={
+        'form': registroForm(instance=registro)
+    }
+    if request.method == 'POST': 
+        formulario = registroForm(data=request.POST, instance = registro)
+        if formulario.is_valid: 
+            formulario.save()
+            return redirect('ver')
+    return render(request, 'draw/form_mod_registro.html', datos)
