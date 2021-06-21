@@ -16,4 +16,3 @@ urlpatterns=[
     path('form_del_registro', form_del_registro, name="form_del_registro"),]
 
 
-form_del_registro

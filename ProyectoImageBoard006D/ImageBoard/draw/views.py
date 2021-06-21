@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import registroForm
 from .models import inicio_sesion, registro
 
@@ -33,20 +33,16 @@ def ver(request):
     regisstro = registro.objects.all()
     return render(request, 'draw/ver.html', context={'registro':regisstro})
 
-def form_mod_registro(request, id):
-    
-    registro_forms = registro.objects.get(nombre=id)
-    datos = {
-
-        'form': registroForm(instance=registro_forms)            
-    }
+def form_mod_registro(request, correo):
+    Registro_forms=registro.get (correo=correo)
+    datos ={'form': registroForm(instance=registro_forms)}
     if request.method == 'POST': 
-        formulario = registroForm(data=request.POST, instance = registro_forms)
+        formulario = registroForm(Data=request.post , instance =registro_forms)
         if formulario.is_valid: 
             formulario.save()
             return redirect('ver')
     return render(request, 'draw/form_mod_registro.html', datos)
-    
+
 
 def form_registro(request):
     if request.method=="POST":
@@ -59,8 +55,13 @@ def form_registro(request):
     return render(request, 'draw/form_registro.html',
     {'registro_form':registro_form})
 
-
-def form_del_registro(request,id):
-    registros = registro.objects.get(nombre=id)
+ 
+def form_del_registro(request,correo):
+    registros = get_object_or_404(registros, correo=correo)
     registros.delete()
     return redirect('ver')
+
+
+
+
+

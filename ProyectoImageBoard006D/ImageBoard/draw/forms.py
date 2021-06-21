@@ -56,7 +56,7 @@ class registroForm(ModelForm):
                 }
             ),
 
-            'fecha_nacimiento': forms.NumberInput(
+            'fecha_nacimiento': forms.TextInput(
                 attrs={
                     'class': 'form-control', 
                     'placeholder': 'Digite fecha nacimiento',
@@ -64,7 +64,7 @@ class registroForm(ModelForm):
                 }
             ),
 
-            'direccion': forms.NumberInput(
+            'direccion': forms.TextInput(
                 attrs={
                     'class': 'form-control', 
                     'placeholder': 'Digite dirección',
@@ -72,7 +72,7 @@ class registroForm(ModelForm):
                 }
             ),
 
-            'region': forms.NumberInput(
+            'region': forms.TextInput(
                 attrs={
                     'class': 'form-control', 
                     'placeholder': 'Digite región',
@@ -80,7 +80,7 @@ class registroForm(ModelForm):
                 }
             ),
 
-            'genero': forms.NumberInput(
+            'genero': forms.TextInput(
                 attrs={
                     'class': 'form-control', 
                     'placeholder': 'Digite género',
