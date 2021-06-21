@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import registroForm
+from .models import inicio_sesion, registro
 
 
 # Create your views here.
@@ -29,29 +31,36 @@ def InicioSesion(request):
 
 def ver(request):
     regisstro = registro.objects.all()
+    return render(request, 'draw/ver.html', context={'registro':regisstro})
 
-    return render(request, 'draw/ver.html', context={'registro':registro})
+def form_mod_registro(request, id):
+    
+    registro_forms = registro.objects.get(nombre=id)
+    datos = {
 
-def form_registro(request):
-    if request.method=="POST":
-        registro_form = registroForm(request.POST)
-        if registro_form.is_valid():
-            registro_form.save() #Reemplaza el insert en django
-            return redirect('home')
-        else:
-            registro_form=registroForm()
-        return render(request, 'draw/form_registro.html',
-        {'registro_form':registro_form})
-
-def form_mod_registro(request,id):
-    regisstro = registro.objects.get(nombre=nombre)
-
-    datos ={
-        'form': registroForm(instance=registro)
+        'form': registroForm(instance=registro_forms)            
     }
     if request.method == 'POST': 
-        formulario = registroForm(data=request.POST, instance = registro)
+        formulario = registroForm(data=request.POST, instance = registro_forms)
         if formulario.is_valid: 
             formulario.save()
             return redirect('ver')
     return render(request, 'draw/form_mod_registro.html', datos)
+    
+
+def form_registro(request):
+    if request.method=="POST":
+            registro_form = registroForm(request.POST)
+            if registro_form.is_valid():
+                registro_form.save() #Reemplaza el insert en django
+                return render('home')
+    else:
+        registro_form=registroForm()
+    return render(request, 'draw/form_registro.html',
+    {'registro_form':registro_form})
+
+
+def form_del_registro(request,id):
+    registros = registro.objects.get(nombre=id)
+    registros.delete()
+    return redirect('ver')

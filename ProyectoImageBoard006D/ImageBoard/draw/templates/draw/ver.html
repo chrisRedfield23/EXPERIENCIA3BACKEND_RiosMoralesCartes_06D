@@ -14,7 +14,7 @@
 </head>
 <body>
        <div class="row">
-            <h1>Mostrando vehiculos</h1>
+            <h1>Mostrando Usuarios</h1>
         </div>
         <table class="table">
             <thead>
@@ -32,24 +32,27 @@
                 </tr>
             </thead>
             <tbody>
-                {%for ve in vehiculos%}
+                {%for registro_form in registro%}
                     <tr>
-                        <td>{{ve.nombre}}</td>
-                        <td>{{ve.apellido}}</td>
-                        <td>{{ve.correo_electronico}}</td>
-                        <td>{{ve.telefono}}</td>
-                        <td>{{ve.fecha_nacimiento}}</td>
-                        <td>{{ve.direccion}}</td>
-                        <td>{{ve.region}}</td>
-                        <td>{{ve.genero}}</td>
-                        <td>{{ve.inicio_sesion}}</td>
-                        <td><a href="{% url 'form_mod_registro' ve.patente%}">Modificar   </a></td>
+                        <td>{{registro_form.nombre}}</td>
+                        <td>{{registro_form.apellido}}</td>
+                        <td>{{registro_form.correo_electronico}}</td>
+                        <td>{{registro_form.telefono}}</td>
+                        <td>{{registro_form.fecha_nacimiento}}</td>
+                        <td>{{registro_form.direccion}}</td>
+                        <td>{{registro_form.region}}</td>
+                        <td>{{registro_form.genero}}</td>
+                        <td>{{registro_form.inicio_sesion}}</td>
+                        
                     </tr>
                 {%endfor%}
 
             </tbody>
 
         </table>
+        <a href="{% url 'form_registro' %}" class="btn btn-primary">Nuevo Usuario</a>
+        <a href="{% url 'form_mod_registro' %}" class="btn btn-primary">Modificar</a>
+        <a href="{% url 'form_del_registro' %}" class="btn btn-danger">Eliminar </a>
 
  </body>
 </html>
