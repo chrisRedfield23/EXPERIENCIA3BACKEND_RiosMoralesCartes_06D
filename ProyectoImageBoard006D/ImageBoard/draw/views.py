@@ -33,8 +33,8 @@ def ver(request):
     regisstro = registro.objects.all()
     return render(request, 'draw/ver.html', context={'registro':regisstro})
 
-def form_mod_registro(request, correo):
-    Registro_forms=registro.get (correo=correo)
+def form_mod_registro(request, correo_electronico):
+    Registro_forms=registro.get (correo_electronico=correo_electronico)
     datos ={'form': registroForm(instance=registro_forms)}
     if request.method == 'POST': 
         formulario = registroForm(Data=request.post , instance =registro_forms)
@@ -56,9 +56,9 @@ def form_registro(request):
     {'registro_form':registro_form})
 
  
-def form_del_registro(request,correo):
-    registros = get_object_or_404(registros, correo=correo)
-    registros.delete()
+def form_del_registro(request,correo_electronico):
+    Registro_forms = get_object_or_404(registros, correo_electronico=correo_electronico)
+    Registro_forms.delete()
     return redirect('ver')
 
 

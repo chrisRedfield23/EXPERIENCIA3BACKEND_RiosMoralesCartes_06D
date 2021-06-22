@@ -77,16 +77,14 @@
                     <td>{{re.region}}</td>
                     <td>{{re.genero}}</td>
                     <td>{{re.inicio_sesion}}</td>
-                        
+                    <td><a href="{% url 'form_registro' %}" class="btn btn-primary">Nuevo Usuario</a></td>
+                    <td><a href="{% url 'form_mod_registro' %}" class="btn btn-primary">Modificar</a></td>
+                    <td><a href="{% url 'form_mod_registro' %}" class="btn btn-danger">Eliminar </a></td>
                 </tr>
             {%endfor%}
 
         </tbody>
 
     </table>
-    <a href="{% url 'form_registro' %}" class="btn btn-primary">Nuevo Usuario</a>
-    <a href="{% url 'form_mod_registro' %}" class="btn btn-primary">Modificar</a>
-    <a href="{% url 'form_del_registro' %}" class="btn btn-danger">Eliminar </a>
-    <br>
  </body>
 </html>
