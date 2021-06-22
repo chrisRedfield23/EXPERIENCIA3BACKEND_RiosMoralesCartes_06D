@@ -9,7 +9,57 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
     crossorigin="anonymous">
-
+    <script>
+        $(function() 
+        {
+          $("formulario").validate({
+               rules: {
+                      nombre: "required",
+                      apellido: "required",
+                      correo_electronico: "required",
+                      telefono: "required",
+                      fecha_nacimiento: "required",
+                      direccion: "required",
+                      region: "required",
+                      genero: "required", 
+                      inicio_sesion: "required",
+                      },   
+                      
+                 messages: 
+                    {
+                    nombre: {
+                        required: 'Ingresa tu nombre*',
+                        },
+                    apellido: {
+                        required: 'Ingresa apellido*',
+                    },
+                    correo_electronico:{
+                        required: 'Ingrese correo, ejemplo: usuario@gmail.com*',
+                        
+                    },
+                    telefono:{
+                        required: 'Ingresa tu N°Telefono',
+                    },
+                    fecha_nacimiento: {
+                        required: 'Ingresa tu fecha de nacimiento',
+                        },
+                    direccion: {
+                      required: 'Ingresa tu dirección',
+                    },
+                    region: {
+                      required: 'Ingresa tu región',
+                    },
+                    genero: {
+                      required: 'Ingrese su género',
+                    },
+                    inicio_sesion: {
+                      required: 'Ingresa id de correo',
+                    },
+                   
+              }//messages
+          }); //$('#formulario').validate
+      }); //function
+    </script>
 
 </head>
 <body>

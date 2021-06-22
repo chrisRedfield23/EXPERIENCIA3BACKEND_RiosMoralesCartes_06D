@@ -16,7 +16,7 @@
     <div class="main">
         <div class="shop_top">
             <div class="container content">
-                <form method="POST" action="" enctype="multipart/form-data">
+                <form method="GET" action="" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="register-top-grid">
                         {{form.as_table}}

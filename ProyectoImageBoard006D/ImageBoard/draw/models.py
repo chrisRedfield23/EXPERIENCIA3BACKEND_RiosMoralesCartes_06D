@@ -23,4 +23,7 @@ class registro(models.Model):
     inicio_sesion = models.ForeignKey(inicio_sesion, on_delete=models.CASCADE)
 
     def _str_(self):
-        return(self.nombre)
+        return(self.correo)
+
+
+        
